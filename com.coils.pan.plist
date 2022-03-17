@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.coils.pan</string>
+    <key>ProgramArguments</key>
+    <array>
+        <!-- 编译后的 main 文件 -->
+        <string>/path/to/main</string>
+        <!-- 配置文件 -->
+        <string>/path/to/configuration.json</string>
+        <!-- 备份列表文件 -->
+        <string>/path/to/backupList.json</string>
+    </array>
+    <!-- 定时启动 -->
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Day</key>
+        <integer>20</integer>
+        <key>Hour</key>
+        <integer>4</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+    <!-- 日志请按需修改 -->
+    <!-- <key>StandardOutPath</key>
+    <string>/var/log/PSS/pan_stdout</string>
+    <key>StandardErrorPath</key>
+    <string>/var/log/PSS/pan_stderr</string> -->
+</dict>
+</plist>

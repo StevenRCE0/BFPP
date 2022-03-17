@@ -1,0 +1,5 @@
+{
+    "storage": "path/to/store/zip/files",
+    "psk": "password",
+    "fragment": 3.5
+}
