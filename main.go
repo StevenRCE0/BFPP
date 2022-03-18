@@ -82,7 +82,6 @@ func syncToPan(configuration Configuration) {
 }
 
 func main() {
-	fmt.Println(os.Args[0], os.Args[1])
 	configuration := readConfiguration(os.Args[1])
 	backupEntryFile, err := ioutil.ReadFile(os.Args[2])
 	if err != nil {
@@ -93,7 +92,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	timeFormatString := strconv.Itoa(time.Now().Year()-2009) + "-" + strconv.Itoa(int(time.Now().Month())) + "-" + strconv.Itoa(time.Now().Day())
+	timeFormatString := strconv.Itoa(time.Now().Year()) + "-" + strconv.Itoa(int(time.Now().Month())) + "-" + strconv.Itoa(time.Now().Day())
 	for i := 0; i < len(backupEntries); i++ {
 		fmt.Println(backupEntries[i].Path)
 		origin, targetPath, targetZipName := backupEntries[i].Path, configuration.Storage+"/"+backupEntries[i].Name, timeFormatString+".zip"
